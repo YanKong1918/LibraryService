@@ -462,3 +462,6 @@ org.eclipse.jgit.errors.TransportException: https://github.com/hyo-me/LibrarySer
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2025-06-10 09:24:04.660
 !MESSAGE close() called when useCnt is already zero for Repository[C:\Users\nbware\git\LibraryService\.git]
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-06-10 10:03:39.985
+!MESSAGE close() called when useCnt is already zero for Repository[C:\Users\nbware\git\LibraryService\.git]
