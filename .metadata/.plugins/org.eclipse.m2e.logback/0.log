@@ -81,3 +81,5 @@
 2025-06-10 09:07:26,478 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
 2025-06-10 09:07:26,481 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nbware\Desktop\workspace_local\LIBRARY_SERVICE\LIBRARY_SERVICE\src\test\resources
 2025-06-10 09:23:00,173 [Worker-8: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2025-06-10 09:24:01,159 [Worker-3: Checking out Maven projects] INFO  o.e.m.s.i.w.MavenProjectCheckoutJob - No Maven projects to import
+2025-06-10 09:24:04,659 [Worker-8: Git Repository Change Scanner] WARN  org.eclipse.jgit.lib.Repository - close() called when useCnt is already zero for Repository[C:\Users\nbware\git\LibraryService\.git]
