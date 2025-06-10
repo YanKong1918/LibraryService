@@ -1,0 +1,83 @@
+2025-06-09 17:03:15,348 [Worker-8: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-06-09 17:27:39,616 [Worker-19: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.test:LIBRARY_SERVICE:0.0.1-SNAPSHOT @ C:\Users\nbware\Desktop\workspace_local\LIBRARY_SERVICE\LIBRARY_SERVICE\pom.xml.
+2025-06-09 17:27:40,455 [Worker-19: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /LIBRARY_SERVICE/src/main/java
+2025-06-09 17:27:40,458 [Worker-19: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /LIBRARY_SERVICE/src/main/resources
+2025-06-09 17:27:40,468 [Worker-19: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /LIBRARY_SERVICE/src/main/resources
+2025-06-09 17:27:40,474 [Worker-19: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /LIBRARY_SERVICE/src/test/java
+2025-06-09 17:27:40,476 [Worker-19: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /LIBRARY_SERVICE/src/test/resources
+2025-06-09 17:27:41,409 [Worker-19: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 3 sec
+2025-06-09 17:27:41,414 [Worker-19: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2025-06-09 17:27:41,821 [Worker-19: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.test:LIBRARY_SERVICE:0.0.1-SNAPSHOT @ C:\Users\nbware\Desktop\workspace_local\LIBRARY_SERVICE\LIBRARY_SERVICE\pom.xml.
+2025-06-09 17:27:42,106 [Worker-19: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /LIBRARY_SERVICE/src/main/java
+2025-06-09 17:27:42,107 [Worker-19: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /LIBRARY_SERVICE/src/main/resources
+2025-06-09 17:27:42,108 [Worker-19: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /LIBRARY_SERVICE/src/main/resources
+2025-06-09 17:27:42,108 [Worker-19: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /LIBRARY_SERVICE/src/test/java
+2025-06-09 17:27:42,109 [Worker-19: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /LIBRARY_SERVICE/src/test/resources
+2025-06-09 17:27:42,466 [Worker-19: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 0.00 sec, update config takes 0.00 sec 
+2025-06-09 17:27:43,834 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-06-09 17:27:43,874 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-09 17:27:43,878 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nbware\Desktop\workspace_local\LIBRARY_SERVICE\LIBRARY_SERVICE\src\test\resources
+2025-06-10 08:44:15,357 [Worker-9: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-06-10 08:44:18,467 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-06-10 08:44:18,485 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-10 08:44:18,489 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nbware\Desktop\workspace_local\LIBRARY_SERVICE\LIBRARY_SERVICE\src\test\resources
+2025-06-10 09:00:17,257 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-06-10 09:00:17,264 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-10 09:00:17,269 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nbware\Desktop\workspace_local\LIBRARY_SERVICE\LIBRARY_SERVICE\src\test\resources
+2025-06-10 09:00:38,743 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-06-10 09:00:38,748 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-10 09:00:38,752 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nbware\Desktop\workspace_local\LIBRARY_SERVICE\LIBRARY_SERVICE\src\test\resources
+2025-06-10 09:02:17,656 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-06-10 09:02:17,664 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-10 09:02:17,667 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nbware\Desktop\workspace_local\LIBRARY_SERVICE\LIBRARY_SERVICE\src\test\resources
+2025-06-10 09:03:00,188 [Worker-26: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.test:LIBRARY_SERVICE:0.0.1-SNAPSHOT @ C:\Users\nbware\Desktop\workspace_local\LIBRARY_SERVICE\LIBRARY_SERVICE\pom.xml.
+2025-06-10 09:03:00,960 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-10 09:03:00,961 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-10 09:03:00,967 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nbware\Desktop\workspace_local\LIBRARY_SERVICE\LIBRARY_SERVICE\src\test\resources
+2025-06-10 09:03:17,013 [Worker-22: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.test:LIBRARY_SERVICE:0.0.1-SNAPSHOT @ C:\Users\nbware\Desktop\workspace_local\LIBRARY_SERVICE\LIBRARY_SERVICE\pom.xml.
+2025-06-10 09:03:36,581 [Worker-22: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.test:LIBRARY_SERVICE:0.0.1-SNAPSHOT @ C:\Users\nbware\Desktop\workspace_local\LIBRARY_SERVICE\LIBRARY_SERVICE\pom.xml.
+2025-06-10 09:03:57,720 [Worker-29: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.test:LIBRARY_SERVICE:0.0.1-SNAPSHOT @ C:\Users\nbware\Desktop\workspace_local\LIBRARY_SERVICE\LIBRARY_SERVICE\pom.xml.
+2025-06-10 09:03:57,983 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-10 09:03:57,984 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-10 09:03:57,987 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nbware\Desktop\workspace_local\LIBRARY_SERVICE\LIBRARY_SERVICE\src\test\resources
+2025-06-10 09:03:59,131 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-06-10 09:03:59,166 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-10 09:03:59,169 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nbware\Desktop\workspace_local\LIBRARY_SERVICE\LIBRARY_SERVICE\src\test\resources
+2025-06-10 09:04:12,454 [Worker-28: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.test:LIBRARY_SERVICE:0.0.1-SNAPSHOT @ C:\Users\nbware\Desktop\workspace_local\LIBRARY_SERVICE\LIBRARY_SERVICE\pom.xml.
+2025-06-10 09:04:12,708 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-10 09:04:12,708 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-10 09:04:12,712 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nbware\Desktop\workspace_local\LIBRARY_SERVICE\LIBRARY_SERVICE\src\test\resources
+2025-06-10 09:04:34,715 [Worker-22: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.test:LIBRARY_SERVICE:0.0.1-SNAPSHOT @ C:\Users\nbware\Desktop\workspace_local\LIBRARY_SERVICE\LIBRARY_SERVICE\pom.xml.
+2025-06-10 09:04:45,176 [Worker-2: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.test:LIBRARY_SERVICE:0.0.1-SNAPSHOT @ C:\Users\nbware\Desktop\workspace_local\LIBRARY_SERVICE\LIBRARY_SERVICE\pom.xml.
+2025-06-10 09:04:45,449 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-10 09:04:45,450 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-10 09:04:45,454 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nbware\Desktop\workspace_local\LIBRARY_SERVICE\LIBRARY_SERVICE\src\test\resources
+2025-06-10 09:04:45,740 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-06-10 09:04:45,748 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-10 09:04:45,751 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nbware\Desktop\workspace_local\LIBRARY_SERVICE\LIBRARY_SERVICE\src\test\resources
+2025-06-10 09:04:49,188 [Worker-31: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.test:LIBRARY_SERVICE:0.0.1-SNAPSHOT @ C:\Users\nbware\Desktop\workspace_local\LIBRARY_SERVICE\LIBRARY_SERVICE\pom.xml.
+2025-06-10 09:04:49,385 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-10 09:04:49,385 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-10 09:04:49,388 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nbware\Desktop\workspace_local\LIBRARY_SERVICE\LIBRARY_SERVICE\src\test\resources
+2025-06-10 09:04:50,668 [Worker-33: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.test:LIBRARY_SERVICE:0.0.1-SNAPSHOT @ C:\Users\nbware\Desktop\workspace_local\LIBRARY_SERVICE\LIBRARY_SERVICE\pom.xml.
+2025-06-10 09:04:50,875 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-10 09:04:50,876 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-10 09:04:50,879 [Worker-33: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nbware\Desktop\workspace_local\LIBRARY_SERVICE\LIBRARY_SERVICE\src\test\resources
+2025-06-10 09:05:21,572 [Worker-2: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.test:LIBRARY_SERVICE:0.0.1-SNAPSHOT @ C:\Users\nbware\Desktop\workspace_local\LIBRARY_SERVICE\LIBRARY_SERVICE\pom.xml.
+2025-06-10 09:05:21,787 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-10 09:05:21,787 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-10 09:05:21,790 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nbware\Desktop\workspace_local\LIBRARY_SERVICE\LIBRARY_SERVICE\src\test\resources
+2025-06-10 09:06:23,471 [Worker-26: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.test:LIBRARY_SERVICE:0.0.1-SNAPSHOT @ C:\Users\nbware\Desktop\workspace_local\LIBRARY_SERVICE\LIBRARY_SERVICE\pom.xml.
+2025-06-10 09:06:23,769 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-10 09:06:23,770 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-10 09:06:23,772 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nbware\Desktop\workspace_local\LIBRARY_SERVICE\LIBRARY_SERVICE\src\test\resources
+2025-06-10 09:06:24,070 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-06-10 09:06:24,081 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-10 09:06:24,083 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nbware\Desktop\workspace_local\LIBRARY_SERVICE\LIBRARY_SERVICE\src\test\resources
+2025-06-10 09:07:07,934 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-06-10 09:07:07,939 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-10 09:07:07,942 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nbware\Desktop\workspace_local\LIBRARY_SERVICE\LIBRARY_SERVICE\src\test\resources
+2025-06-10 09:07:26,473 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-06-10 09:07:26,478 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-06-10 09:07:26,481 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\nbware\Desktop\workspace_local\LIBRARY_SERVICE\LIBRARY_SERVICE\src\test\resources
+2025-06-10 09:23:00,173 [Worker-8: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
