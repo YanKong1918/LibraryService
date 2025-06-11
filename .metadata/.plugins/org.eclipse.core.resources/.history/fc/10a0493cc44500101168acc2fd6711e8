@@ -1,9 +1,0 @@
-package com.test.library.service;
-
-import com.test.library.dto.FindBooksResDto;
-
-public interface LibraryService {
-
-	FindBooksResDto findBooks();
-
-}

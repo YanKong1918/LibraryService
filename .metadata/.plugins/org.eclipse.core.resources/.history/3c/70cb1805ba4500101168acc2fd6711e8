@@ -1,5 +1,0 @@
-package com.test.library.service.impl;
-
-public class LibraryServiceImpl implements LibraryService {
-
-}
