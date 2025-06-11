@@ -1,0 +1,24 @@
+package com.test.library.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.test.library.dto.FindBookResDto;
+import com.test.library.service.LibraryService;
+
+import lombok.RequiredArgsConstructor;
+
+@RestController
+@RequiredArgsConstructor
+public class LibraryController {
+	
+	private final LibraryService libraryService;
+	
+	public BookListResDto getBookList() {
+		return libraryService.getBookList();
+	}
+	
+	public FindBookResDto findBook() {
+		return libraryService.findBook();
+	}
+
+}

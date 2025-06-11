@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://127.0.0.1:5432/library
+    username: library_user
+    password: library@!
+
+  jpa:
+    show-sql: true          # SQL 출력
+    properties:
+      hibernate:
+        format_sql: true    # 보기 좋게 포맷팅
+
+logging:
+  level:
+    org.hibernate.SQL: debug              # SQL 로그 레벨
+    org.hibernate.type.descriptor.sql: trace  # 바인딩되는 실제 값도 출력

@@ -1,0 +1,20 @@
+package com.test.library.dto;
+
+import lombok.Builder;
+
+public class FindBooksResDto {
+	
+	private int resCode;
+	private String resMsg;
+	private Object data;
+	
+	@Builder
+	private FindBooksResDto (int resCode, String resMsg, Object data) {
+		this.resCode = resCode;
+		this.resMsg = resMsg;
+		this.data = data;
+	}
+	
+	
+
+}

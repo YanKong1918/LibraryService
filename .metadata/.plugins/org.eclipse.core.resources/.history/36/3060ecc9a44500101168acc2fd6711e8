@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://127.0.0.1:5432/library
+    username: library_user
+    password: library@!
+
+logging:
+  level:
+    org.hibernate.SQL: debug        # 실행되는 SQL 로그
+    org.hibernate.type.descriptor: trace  # 바인딩 값까지 보기 (Optional)

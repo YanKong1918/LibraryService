@@ -1,0 +1,50 @@
+package com.test.library.config;
+
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.web.filter.CharacterEncodingFilter;
+
+
+@Configuration
+@EnableWebSecurity
+public class WebSecurityConfig {
+	
+	@Bean
+	SecurityFilterChain setSecurityFilterChain(HttpSecurity http) throws Exception {
+		
+		// URI 한글깨짐 방지
+	    CharacterEncodingFilter filter = new CharacterEncodingFilter();
+	    filter.setEncoding("UTF-8");
+	    filter.setForceEncoding(true);
+
+	    http
+		.addFilterBefore(uriEncodingFilter, CsrfFilter.class)
+		.addFilterBefore(requestTokenFilter, BasicAuthenticationFilter.class) 
+		
+		.csrf((csrfConfig) -> csrfConfig.disable())
+		
+		.exceptionHandling(
+			(exceptionConfig) -> exceptionConfig
+				.authenticationEntryPoint(tokenAuthorizedEntryPoint)	// 토큰 인증 실패
+				.accessDeniedHandler(tokenAccessFailureHandler)			// 권한 인증 실패
+		)		
+		
+		.authorizeHttpRequests(
+			(authorizeRequests) -> authorizeRequests
+//				.requestMatchers(PathRequest.toH2Console()).permitAll()
+				.requestMatchers("/V100/*").permitAll()
+				.anyRequest().authenticated()
+		)
+		
+		.userDetailsService(loginHistoryService);
+		
+		
+		return http.build();
+	}
+
+	
+}

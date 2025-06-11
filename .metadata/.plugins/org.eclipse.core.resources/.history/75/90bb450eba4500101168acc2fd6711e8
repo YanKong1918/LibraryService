@@ -1,0 +1,7 @@
+package com.test.library.service.impl;
+
+import com.test.library.service.LibraryService;
+
+public class LibraryServiceImpl implements LibraryService {
+
+}

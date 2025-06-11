@@ -1,5 +1,10 @@
 package com.test.library.service;
 
-public class LibraryService {
+import com.test.library.dto.FindBooksReqDto;
+import com.test.library.dto.FindBooksResDto;
+
+public interface LibraryService {
+
+	public FindBooksResDto findBooks(FindBooksReqDto request);
 
 }

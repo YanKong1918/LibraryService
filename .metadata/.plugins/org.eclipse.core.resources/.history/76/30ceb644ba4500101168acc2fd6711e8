@@ -1,0 +1,5 @@
+package com.test.library.repository;
+
+public interface LibraryMapper {
+
+}

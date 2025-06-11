@@ -1,0 +1,5 @@
+package com.test.library.config;
+
+public class WebSecurityConfig {
+
+}

@@ -1,0 +1,5 @@
+package com.test.library.dto;
+
+public class FindBookResDto {
+
+}

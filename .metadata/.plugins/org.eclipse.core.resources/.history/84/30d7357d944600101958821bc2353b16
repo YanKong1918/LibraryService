@@ -1,0 +1,22 @@
+package com.test.library.entity;
+
+import java.time.LocalDate;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.Getter;
+
+@Table(name = "loan")
+@Entity
+@Getter
+public class Loan {
+
+	private Long id;
+
+	private User user;
+
+	private Book book;
+
+	private LocalDate loanDate;
+	private LocalDate dueDate;
+}

@@ -1,0 +1,9 @@
+package com.test.library.entity;
+
+import jakarta.persistence.Entity;
+
+
+@Entity
+public class Book {
+
+}

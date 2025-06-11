@@ -20,8 +20,8 @@
 		<item key="create_package_info_java" value="false"/>
 	</section>
 	<section name="NewClassCreationWizard.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="589"/>
-		<item key="DIALOG_Y_ORIGIN" value="357"/>
+		<item key="DIALOG_X_ORIGIN" value="630"/>
+		<item key="DIALOG_Y_ORIGIN" value="202"/>
 		<item key="DIALOG_WIDTH" value="1400"/>
 		<item key="DIALOG_HEIGHT" value="904"/>
 		<item key="DIALOG_FONT_NAME" value="1|Noto Sans KR DemiLight|10.2|0|WINDOWS|1|-17|0|0|0|350|0|0|0|-127|3|2|1|50|Noto Sans KR DemiLight"/>
@@ -36,5 +36,26 @@
 	<section name="completion_proposal_size">
 	</section>
 	<section name="quick_assist_proposal_size">
+	</section>
+	<section name="RefactoringWizard.preview">
+		<item key="width" value="600"/>
+		<item key="height" value="400"/>
+	</section>
+	<section name="org.eclipse.ltk.ui.refactoring.settings">
+		<item key="renameSubpackages" value="false"/>
+		<item key="updateTextualMatches" value="false"/>
+		<item key="updateQualifiedNames" value="false"/>
+		<item key="patterns" value="*"/>
+		<item key="updateSimilarElements" value="false"/>
+		<item key="updateSimilarElementsMatchStrategy" value="1"/>
+	</section>
+	<section name="NewInterfaceCreationWizard.dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="589"/>
+		<item key="DIALOG_Y_ORIGIN" value="357"/>
+		<item key="DIALOG_WIDTH" value="1400"/>
+		<item key="DIALOG_HEIGHT" value="772"/>
+		<item key="DIALOG_FONT_NAME" value="1|Noto Sans KR DemiLight|10.2|0|WINDOWS|1|-17|0|0|0|350|0|0|0|-127|3|2|1|50|Noto Sans KR DemiLight"/>
+	</section>
+	<section name="RenameInformationPopup">
 	</section>
 </section>

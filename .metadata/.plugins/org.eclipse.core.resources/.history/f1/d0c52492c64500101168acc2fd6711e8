@@ -1,0 +1,21 @@
+package com.test.library.dto;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+public class FindBooksReqDto {
+	
+	@JsonProperty("res_code")
+	@JsonInclude(Include.NON_NULL)
+	private String title;
+	
+	@JsonProperty("res_msg")
+	@JsonInclude(Include.NON_NULL)
+	private String author;
+	
+	@JsonProperty("code")
+	@JsonInclude(Include.NON_NULL)
+	private String code;
+	
+}
