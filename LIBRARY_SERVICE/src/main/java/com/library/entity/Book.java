@@ -1,4 +1,4 @@
-package com.test.library.entity;
+package com.library.entity;
 
 import java.util.List;
 
@@ -17,7 +17,7 @@ public class Book {
 
 	@Id // 주요식별자(primary key)
 	@GeneratedValue
-	private Long id;
+	private int id;
 
 	@Column(nullable = false)
 	private String title;
@@ -28,4 +28,9 @@ public class Book {
 
 	@OneToMany(mappedBy = "book")
 	private List<Loan> loans;
+	
+	
+	public void setAvaiable(boolean isAvaiable) {
+		this.isAvailable = isAvaiable;
+	}
 }
