@@ -1,9 +1,0 @@
-package com.test.library.dto;
-
-public class FindBooksResDto {
-	
-	private int resCode;
-	private String resMsg;
-	private Object data;
-
-}

@@ -1,6 +1,0 @@
-package com.test.library.controller;
-
-@RestController
-public class LibraryController {
-
-}
