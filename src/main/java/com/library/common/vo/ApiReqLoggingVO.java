@@ -16,45 +16,45 @@ import java.util.Map;
 @Builder
 public class ApiReqLoggingVO {
 
-	@JsonProperty("method")
-	private String method;
+    @JsonProperty("method")
+    private String method;
 
-	@JsonProperty("uri")
-	private String uri;
+    @JsonProperty("uri")
+    private String uri;
 
-	@JsonRawValue
-	@JsonProperty("body")
-	private Object body;
+    @JsonRawValue
+    @JsonProperty("body")
+    private Object body;
 
-	@JsonRawValue
-	@JsonProperty("param")
-	private String param;
+    @JsonRawValue
+    @JsonProperty("param")
+    private String param;
 
-	@JsonProperty("ip")
-	private String ip;
+    @JsonProperty("ip")
+    private String ip;
 
 
-	public static ApiReqLoggingVO of(ApiRequestWrapper request, JsonNode requestBody) {
-		return ApiReqLoggingVO.builder()
-				.method(request.getMethod())
-				.uri(request.getRequestURI())
-				.body(requestBody.isEmpty() ? null : requestBody)
-				.param(getReqQueryString(request))
-				.ip(request.getRemoteAddr())
-				.build();
-	}
+    public static ApiReqLoggingVO of(ApiRequestWrapper request, JsonNode requestBody) {
+        return ApiReqLoggingVO.builder()
+                .method(request.getMethod())
+                .uri(request.getRequestURI())
+                .body(requestBody.isEmpty() ? null : requestBody)
+                .param(getReqQueryString(request))
+                .ip(request.getRemoteAddr())
+                .build();
+    }
 
-	private static String getReqQueryString(HttpServletRequest request) {
-		String result = null;
-		Map<String, String[]> paramMap = request.getParameterMap();
+    private static String getReqQueryString(HttpServletRequest request) {
+        String result = null;
+        Map<String, String[]> paramMap = request.getParameterMap();
 
-		if (!paramMap.isEmpty()) {
-			try {
-				result = new ObjectMapper().writeValueAsString(paramMap);
-			} catch (JsonProcessingException e) {
-				return null;
-			}
-		}
-		return result;
-	}
+        if (!paramMap.isEmpty()) {
+            try {
+                result = new ObjectMapper().writeValueAsString(paramMap);
+            } catch (JsonProcessingException e) {
+                return null;
+            }
+        }
+        return result;
+    }
 }

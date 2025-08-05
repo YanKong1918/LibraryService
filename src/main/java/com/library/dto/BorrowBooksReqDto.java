@@ -13,6 +13,6 @@ public class BorrowBooksReqDto {
     private int id;
 
     @JsonProperty("book_list")
-    private List<Book> bookList;
+    private List<Integer> bookList;
 
 }

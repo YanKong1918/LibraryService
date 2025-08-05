@@ -1,12 +1,11 @@
 package com.library.repository;
 
-import java.util.List;
-
 import com.library.dto.BookDto;
 
+import java.util.List;
 
 public interface CustomRepository {
-	
-	List<BookDto> findBooks(String keyword);
+
+    List<BookDto> findBooks(String keyword);
 
 }

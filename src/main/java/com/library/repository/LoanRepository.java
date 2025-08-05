@@ -18,7 +18,7 @@ public interface LoanRepository extends JpaRepository<Loan, Integer> {
 	Loan findFirstByBookIdAndReturnDateIsNullOrderByLoanDateDesc(int bookId);
 	
 	// 반납기한이 지난 대여 기록을 모두 조회
-	List<Loan> findAllByDueDateBeforeAndReturnDateIsNullAndStatus(LocalDate now, Loan.Status status);
+	List<Loan> findAllByDueDateBeforeAndReturnDateIsNull(LocalDate now);
 
 	@Query("""
 			SELECT l
@@ -29,7 +29,7 @@ public interface LoanRepository extends JpaRepository<Loan, Integer> {
 			LIMIT 1
 			""")
 	Loan findLatestUnreturnedLoanByBookId(@Param("book_id") int bookId);
-	// JPQL에서는 LIMIT을 사용할 수 없기 때문에.. 이 QUERY는 유효하지 않다.
+	// JPQL 에서는 LIMIT을 사용할 수 없기 때문에.. 이 QUERY는 유효하지 않다.
 	// 참조. JPQL은 Entity 기준 쿼리이다.
 
 	@Modifying
