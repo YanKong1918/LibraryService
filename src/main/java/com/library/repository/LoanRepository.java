@@ -20,6 +20,10 @@ public interface LoanRepository extends JpaRepository<Loan, Integer> {
 	// 반납기한이 지난 대여 기록을 모두 조회
 	List<Loan> findAllByDueDateBeforeAndReturnDateIsNull(LocalDate now);
 
+	List<Loan> findAllByBookId(int bookId);
+
+	List<Loan> findAllByUserId(int userId);
+
 	@Query("""
 			SELECT l
 			FROM Loan l

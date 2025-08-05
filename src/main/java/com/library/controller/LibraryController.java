@@ -26,4 +26,14 @@ public class LibraryController {
         return libraryService.returnBooks(request);
     }
 
+    @GetMapping("/books/loans")
+    public BooksLoanRecordDto getBooksLoanRecord(@RequestParam( name = "book_id") int id) {
+        return libraryService.getBooksLoanRecord(id);
+    }
+
+    @GetMapping("/users/loans")
+    public UsersLoanRecordDto getUsersLoanRecord(@RequestParam(name = "user_id") int id) {
+        return libraryService.getUsersLoanRecord(id);
+    }
+
 }

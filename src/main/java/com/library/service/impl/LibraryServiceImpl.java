@@ -39,12 +39,13 @@ public class LibraryServiceImpl implements LibraryService {
     @Override
     public FindBooksResDto findBooks(FindBooksReqDto request) {
         try {
-
             String keyword = request.getKeyword();
             List<BookDto> bookList = customRepository.findBooks(keyword);
+
             if (bookList == null) {
                 return FindBooksResDto.from(RES_CODE.SUCCESS_204);
             }
+
             return FindBooksResDto.of(RES_CODE.SUCCESS_200, bookList);
 
         } catch (Exception e) {
@@ -60,7 +61,6 @@ public class LibraryServiceImpl implements LibraryService {
     @Transactional
     @Override
     public BorrowBooksResDto borrowBooks(BorrowBooksReqDto request) {
-
         try {
             User user = userRepository.findById(request.getId()).orElseThrow(UserNotFoundException::new);
             List<Integer> bookList = request.getBookList();
@@ -99,7 +99,6 @@ public class LibraryServiceImpl implements LibraryService {
     public ReturnBooksResDto returnBooks(ReturnBooksReqDto request) {
         try {
             for (int id : request.getBookList()) {
-
                 Book book = bookRepository.findById(id).orElseThrow(BookNotFoundException::new);
                 Loan loan = loanRepository.findFirstByBookIdAndReturnDateIsNullOrderByLoanDateDesc(id);
 
@@ -117,6 +116,42 @@ public class LibraryServiceImpl implements LibraryService {
         } catch (Exception e) {
             log.error("## ERROR returnBooks - {}", e.getMessage(), e);
             return ReturnBooksResDto.from(RES_CODE.ERROR);
+        }
+    }
+
+    @Override
+    public BooksLoanRecordDto getBooksLoanRecord(int bookId) {
+        try{
+            Book book = bookRepository.findById(bookId).orElseThrow(BookNotFoundException::new);
+            List<Loan> list = loanRepository.findAllByBookId(bookId);
+
+            if(list.isEmpty()){
+                return BooksLoanRecordDto.from(RES_CODE.SUCCESS_204);
+            }
+
+            return BooksLoanRecordDto.of(RES_CODE.SUCCESS, list);
+
+        } catch (Exception e){
+            log.error("## ERROR getBooksLoanRecord - {}", e.getMessage(), e);
+            return BooksLoanRecordDto.from(RES_CODE.ERROR_404);
+        }
+    }
+
+    @Override
+    public UsersLoanRecordDto getUsersLoanRecord(int userId) {
+        try {
+            User user = userRepository.findById(userId).orElseThrow(UserNotFoundException::new);
+            List<Loan> list = loanRepository.findAllByUserId(userId);
+
+            if(list.isEmpty()){
+                return UsersLoanRecordDto.from(RES_CODE.SUCCESS_204);
+            }
+
+            return UsersLoanRecordDto.of(RES_CODE.SUCCESS, list);
+
+        } catch (Exception e){
+            log.error("## ERROR getUsersLoanRecord - {}", e.getMessage(), e);
+            return UsersLoanRecordDto.from(RES_CODE.ERROR_404);
         }
     }
 
