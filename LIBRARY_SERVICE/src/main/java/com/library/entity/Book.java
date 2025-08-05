@@ -30,7 +30,7 @@ public class Book {
 	private List<Loan> loans;
 	
 	
-	public void setAvaiable(boolean isAvaiable) {
-		this.isAvailable = isAvaiable;
+	public void setAvailable(boolean isAvailable) {
+		this.isAvailable = isAvailable;
 	}
 }

@@ -1,19 +1,13 @@
 package com.library.service;
 
-import com.library.common.domain.ApiResDto;
-import com.library.dto.BookDto;
-import com.library.dto.BorrowBooksReqDto;
-import com.library.dto.FindBooksReqDto;
-import com.library.dto.ReturnBooksReqDto;
-
-import java.util.List;
+import com.library.dto.*;
 
 public interface LibraryService {
 
-    ApiResDto<List<BookDto>> findBooks(FindBooksReqDto request);
+    FindBooksResDto findBooks(FindBooksReqDto request);
 
-    ApiResDto<Void> borrowBooks(BorrowBooksReqDto request);
+    BorrowBooksResDto borrowBooks(BorrowBooksReqDto request);
 
-    ApiResDto<Void> returnBooks(ReturnBooksReqDto request);
+    ReturnBooksResDto returnBooks(ReturnBooksReqDto request);
 
 }

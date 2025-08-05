@@ -3,17 +3,14 @@ package com.library.service.impl;
 import java.time.LocalDate;
 import java.util.List;
 
+import com.library.common.code.RES_CODE;
+import com.library.common.exception.BookNotFoundException;
+import com.library.dto.*;
 import org.springframework.stereotype.Service;
 
-import com.library.common.code.ERROR_CODE;
-import com.library.common.domain.ApiResDto;
 import com.library.common.exception.LoanNotFoundException;
 import com.library.common.exception.UnavailableBookException;
 import com.library.common.exception.UserNotFoundException;
-import com.library.dto.BookDto;
-import com.library.dto.BorrowBooksReqDto;
-import com.library.dto.FindBooksReqDto;
-import com.library.dto.ReturnBooksReqDto;
 import com.library.entity.Book;
 import com.library.entity.Loan;
 import com.library.entity.User;
@@ -27,8 +24,8 @@ import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
 @Service
+@Slf4j
 @RequiredArgsConstructor
 public class LibraryServiceImpl implements LibraryService {
 
@@ -38,34 +35,36 @@ public class LibraryServiceImpl implements LibraryService {
 	private final CustomRepository customRepository;
 
 	@Override
-	public ApiResDto<List<BookDto>> findBooks(FindBooksReqDto request) {
+	public FindBooksResDto findBooks(FindBooksReqDto request) {
 		try {
 
 			String keyword = request.getKeyword();
 			List<BookDto> bookList = customRepository.findBooks(keyword);
-			if(bookList == null) {
-				return ApiResDto.success();
+			if (bookList == null) {
+				return FindBooksResDto.from(RES_CODE.SUCCESS_204);
 			}
-			return ApiResDto.success(bookList);
+			return FindBooksResDto.of(RES_CODE.SUCCESS_200, bookList);
 
 		} catch (Exception e) {
 			log.error("## ERROR findBooks - {}", e.getMessage(), e);
-			return ApiResDto.fail(ERROR_CODE.BAD_REQUEST);
+			return FindBooksResDto.from(RES_CODE.ERROR_404);
 		}
 	}
 
+
 	@Transactional
 	@Override
-	public ApiResDto<Void> borrowBooks(BorrowBooksReqDto request) {
-		try {
-			User user = userRepository.findById(request.getId()).orElseThrow(() -> new UserNotFoundException());
+	public BorrowBooksResDto borrowBooks(BorrowBooksReqDto request) {
+
+		try{
+			User user = userRepository.findById(request.getId()).orElseThrow(UserNotFoundException::new);
 
 			LocalDate loanDate = LocalDate.now();
 			LocalDate dueDate = loanDate.plusDays(7);
 
 			for (Book B : request.getBookList()) {
 
-				Book book = bookRepository.findById(B.getId()).orElseThrow();
+				Book book = bookRepository.findById(B.getId()).orElseThrow(BookNotFoundException::new);
 
 				if (!book.isAvailable()) {
 					throw new UnavailableBookException();
@@ -77,17 +76,17 @@ public class LibraryServiceImpl implements LibraryService {
 				bookRepository.updateAvailabilityById(book.getId(), false);
 			}
 
-			return ApiResDto.success();
+			return BorrowBooksResDto.from(RES_CODE.SUCCESS);
 
-		} catch (Exception e) {
+		}catch (Exception e) {
 			log.error("## ERROR borrowBooks - {}", e.getMessage(), e);
-			return ApiResDto.fail(ERROR_CODE.BAD_REQUEST);
+			return BorrowBooksResDto.from(RES_CODE.ERROR);
 		}
 	}
 
 	@Transactional
 	@Override
-	public ApiResDto<Void> returnBooks(ReturnBooksReqDto request) {
+	public ReturnBooksResDto returnBooks(ReturnBooksReqDto request) {
 		try {
 			for (Book B : request.getBookList()) {
 
@@ -99,14 +98,14 @@ public class LibraryServiceImpl implements LibraryService {
 				}
 
 				loan.setReturnDate(LocalDate.now());
-				book.setAvaiable(true);
+				book.setAvailable(true);
 			}
 
-			return ApiResDto.success();
+			return ReturnBooksResDto.from(RES_CODE.SUCCESS);
 
 		} catch (Exception e) {
 			log.error("## ERROR returnBooks - {}", e.getMessage(), e);
-			return ApiResDto.fail(ERROR_CODE.BAD_REQUEST);
+			return ReturnBooksResDto.from(RES_CODE.ERROR);
 		}
 	}
 

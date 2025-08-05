@@ -13,7 +13,7 @@ import lombok.Getter;
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
-public class ApiResDto<T> {
+public class ApiResponse<T> {
 
 	@JsonProperty("status")
 	private final String status;
@@ -31,26 +31,26 @@ public class ApiResDto<T> {
 	
 	
 	// 성공
-	public static <T> ApiResDto<T> success(T data) {
-		return ApiResDto.<T>builder()
+	public static <T> ApiResponse<T> success(T data) {
+		return ApiResponse.<T>builder()
 				.status("성공").data(data)
 				.build();
 	}
 	
-	public static <T> ApiResDto<T> success() {
-		return ApiResDto.<T>builder()
+	public static <T> ApiResponse<T> success() {
+		return ApiResponse.<T>builder()
 				.status("성공").build();
 	}
 	
 	// 실패
-	public static <T> ApiResDto<T> fail(ERROR_CODE code) {
-		return ApiResDto.<T>builder()
+	public static <T> ApiResponse<T> fail(ERROR_CODE code) {
+		return ApiResponse.<T>builder()
 				.status("실패").code(String.valueOf(code))
 				.build();
 	}
 	
-	public static <T> ApiResDto<T> fail(ERROR_CODE code, String message) {
-		return ApiResDto.<T>builder()
+	public static <T> ApiResponse<T> fail(ERROR_CODE code, String message) {
+		return ApiResponse.<T>builder()
 				.status("실패").code(String.valueOf(code)).message(message)
 				.build();
 	}

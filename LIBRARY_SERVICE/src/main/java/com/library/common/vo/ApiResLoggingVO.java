@@ -1,8 +1,8 @@
-package com.library.common.domain;
+package com.library.common.vo;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRawValue;
-import com.library.config.ApiRequestWrapper;
+import com.library.common.filter.ApiRequestWrapper;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

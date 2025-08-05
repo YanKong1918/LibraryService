@@ -1,12 +1,11 @@
-package com.library.common.domain;
-
+package com.library.common.vo;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRawValue;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.library.config.ApiRequestWrapper;
+import com.library.common.filter.ApiRequestWrapper;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.Builder;
 import lombok.Getter;
@@ -16,13 +15,13 @@ import java.util.Map;
 @Getter
 @Builder
 public class ApiReqLoggingVO {
-	
+
 	@JsonProperty("method")
 	private String method;
 
 	@JsonProperty("uri")
 	private String uri;
-	
+
 	@JsonRawValue
 	@JsonProperty("body")
 	private Object body;
@@ -30,7 +29,7 @@ public class ApiReqLoggingVO {
 	@JsonRawValue
 	@JsonProperty("param")
 	private String param;
-	
+
 	@JsonProperty("ip")
 	private String ip;
 
@@ -44,7 +43,7 @@ public class ApiReqLoggingVO {
 				.ip(request.getRemoteAddr())
 				.build();
 	}
-	
+
 	private static String getReqQueryString(HttpServletRequest request) {
 		String result = null;
 		Map<String, String[]> paramMap = request.getParameterMap();
