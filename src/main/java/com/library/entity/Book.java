@@ -11,7 +11,7 @@ import java.util.List;
 public class Book {
 
     @Id // 주요식별자(primary key)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue
     private int id;
 
     @Column(nullable = false)

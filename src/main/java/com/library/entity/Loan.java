@@ -11,7 +11,7 @@ import java.time.LocalDate;
 public class Loan {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue
     private int id;
 
     @ManyToOne
@@ -30,8 +30,7 @@ public class Loan {
     @Enumerated(EnumType.STRING)
     private Status status;
 
-    private Loan() {
-    }
+    private Loan() { }
 
     public Loan(User user, Book book, LocalDate loanDate, LocalDate dueDate) {
         this.user = user;
@@ -54,7 +53,8 @@ public class Loan {
     public enum Status {
         BORROWED,
         RETURNED,
-        OVERDUE
+        OVERDUE,
+        LOST
     }
 
 }

@@ -18,4 +18,12 @@ public class BorrowBooksResDto extends BaseResponse {
                 .build();
     }
 
+    public static BorrowBooksResDto exceed(RES_CODE response, int loanCnt) {
+        return BorrowBooksResDto.builder()
+                .resCode(response.getCode())
+                .resMsg(response.getMessage() + "\nAlready borrowed " + loanCnt + " books..")
+                .build();
+    }
+
+
 }

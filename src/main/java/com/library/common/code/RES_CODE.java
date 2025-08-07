@@ -7,7 +7,9 @@ public enum RES_CODE {
     SUCCESS_204(204, "클라이언트의 요구를 처리했으나 전달할 데이터가 없음"),
 
     ERROR(400, "잘못된 요청입니다"),
-    ERROR_404(404, "요청을 처리할 수 없습니다")
+    ERROR_404(404, "요청을 처리할 수 없습니다"),
+    DENIED(401, "도서를 대출할 수 없습니다 (도서 연체)"),
+    EXCEED_MAX_LOAN(402, "최대 대출 권수를 초과하였습니다")
     ;
 
     private final int code;
