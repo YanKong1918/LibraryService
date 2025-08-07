@@ -132,7 +132,7 @@ public class LibraryServiceImpl implements LibraryService {
                 }
 
                 // 연체 도서 기록
-                if(loan.getStatus().equals(Loan.Status.OVERDUE)) {
+                if (loan.getStatus().equals(Loan.Status.OVERDUE)) {
                     lastLoan = loan;
                 }
 
@@ -151,7 +151,7 @@ public class LibraryServiceImpl implements LibraryService {
                 Optional<Penalty> activePenalty = penaltyRepository.findByUserAndEndDateIsNull(user);
                 Loan lastReturned = lastLoan;
                 activePenalty.ifPresent(penalty -> {
-                    if(lastReturned != null){
+                    if (lastReturned != null) {
                         long overdueDays = ChronoUnit.DAYS.between(lastReturned.getDueDate(), lastReturned.getReturnDate());
                         penalty.setEndDate(LocalDate.now().plusDays(overdueDays));
                     }
@@ -164,6 +164,38 @@ public class LibraryServiceImpl implements LibraryService {
         } catch (Exception e) {
             log.error("## ERROR returnBooks - {}", e.getMessage(), e);
             return ReturnBooksResDto.from(RES_CODE.ERROR);
+        }
+    }
+
+    /**
+     * 도서 대여 연장
+     */
+    @Override
+    public ExtendLoanResDto extendLoan(ExtendLoanReqDto request) {
+        try {
+            User user = userRepository.findById(request.getId()).orElseThrow(UserNotFoundException::new);
+            LocalDate today = LocalDate.now();
+
+            for (int id : request.getBookList()) {
+                Loan loan = loanRepository.findFirstByBookIdAndReturnDateIsNullOrderByLoanDateDesc(id);
+
+                if (loan == null) {
+                    throw new LoanNotFoundException();
+                }
+
+                if (today.isAfter(loan.getLoanDate()) && loan.getStatus().equals(Loan.Status.BORROWED)
+                        && loan.getExtensionCnt() < 1) {
+                    loan.setDueDate(loan.getDueDate().plusDays(7));
+                    loan.setExtensionCnt(1);
+                }
+
+            }
+
+            return ExtendLoanResDto.from(RES_CODE.SUCCESS);
+
+        } catch (Exception e) {
+            log.error("## ERROR extendLoan - {}", e.getMessage(), e);
+            return ExtendLoanResDto.from(RES_CODE.ERROR_404);
         }
     }
 

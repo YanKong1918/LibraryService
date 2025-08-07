@@ -30,6 +30,8 @@ public class Loan {
     @Enumerated(EnumType.STRING)
     private Status status;
 
+    private int extensionCnt = 0;
+
     private Loan() { }
 
     public Loan(User user, Book book, LocalDate loanDate, LocalDate dueDate) {
@@ -39,6 +41,11 @@ public class Loan {
         this.dueDate = dueDate;
         this.returnDate = null;
         this.status = Status.BORROWED;
+        this.extensionCnt = 0;
+    }
+
+    public void setDueDate(LocalDate dueDate) {
+        this.dueDate = dueDate;
     }
 
     public void setReturnDate(LocalDate returnDate) {
@@ -47,6 +54,10 @@ public class Loan {
 
     public void setStatus(Status status) {
         this.status = status;
+    }
+
+    public void setExtensionCnt(int extensionCnt) {
+        this.extensionCnt = extensionCnt;
     }
 
     // 대여상태

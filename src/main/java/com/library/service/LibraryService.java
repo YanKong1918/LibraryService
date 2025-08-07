@@ -10,6 +10,8 @@ public interface LibraryService {
 
     ReturnBooksResDto returnBooks(ReturnBooksReqDto request);
 
+    ExtendLoanResDto extendLoan(ExtendLoanReqDto request);
+
     BooksLoanRecordDto getBooksLoanRecord(int id);
 
     UsersLoanRecordDto getUsersLoanRecord(int id);

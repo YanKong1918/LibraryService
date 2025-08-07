@@ -53,7 +53,7 @@ public class EventScheduler {
         }
     }
 
-    @Scheduled(cron = "0 * * * * *")
+    @Scheduled(cron = "0 0/10 * * * *")
     public void timer() {
         log.info("*------------------ LOG TO NOTICE . . ");
     }
