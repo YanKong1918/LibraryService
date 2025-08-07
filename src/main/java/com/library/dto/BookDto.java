@@ -17,6 +17,6 @@ public class BookDto {
     private int totalCnt;
 
     @JsonProperty("available_cnt")
-    private int avaiableCnt;
+    private int availableCnt;
 
 }

@@ -1,22 +1,17 @@
 package com.library.task;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.library.entity.Loan;
 import com.library.entity.Penalty;
 import com.library.entity.User;
 import com.library.repository.LoanRepository;
 import com.library.repository.PenaltyRepository;
 import lombok.RequiredArgsConstructor;
-import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Optional;
 
@@ -25,7 +20,6 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class EventScheduler {
 
-    private final ObjectMapper objectMapper;
     private final LoanRepository loanRepository;
     private final PenaltyRepository penaltyRepository;
 
@@ -46,7 +40,7 @@ public class EventScheduler {
             User user = loan.getUser();
             Optional<Penalty> hasPenalty = penaltyRepository.findByUserAndEndDateIsNull(user);
             // 페널티가 없을 경우 생성
-            if(hasPenalty.isEmpty()){
+            if (hasPenalty.isEmpty()) {
                 Penalty newPenalty = new Penalty(user, today);
                 penaltyRepository.save(newPenalty);
             }
