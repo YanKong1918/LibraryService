@@ -1,11 +1,13 @@
 package com.library.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.library.common.code.RES_CODE;
 import com.library.common.domain.BaseResponse;
 import lombok.Builder;
 
 public class FindBooksResDto extends BaseResponse {
 
+    @JsonProperty("data")
     private Object data;
 
     @Builder

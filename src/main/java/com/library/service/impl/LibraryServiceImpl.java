@@ -33,7 +33,6 @@ public class LibraryServiceImpl implements LibraryService {
     private final CustomRepository customRepository;
     private final PenaltyRepository penaltyRepository;
 
-
     /**
      * 도서 검색
      */
@@ -43,7 +42,7 @@ public class LibraryServiceImpl implements LibraryService {
             String keyword = request.getKeyword();
             List<BookDto> bookList = customRepository.findBooks(keyword);
 
-            if (bookList == null) {
+            if (bookList.isEmpty()) {
                 return FindBooksResDto.from(RES_CODE.SUCCESS_204);
             }
 
